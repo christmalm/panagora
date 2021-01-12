@@ -1,0 +1,129 @@
+// Colors
+@black: #131518;
+@turqoise: #35c092;
+@gray: #c2c2c2;
+@light_gray: #f2f2f2;
+@my-white: #ececec;
+
+
+
+
+body{
+    background-color: @light_gray;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Oswald', sans-serif;
+    ;
+    .wrapper-logo{
+        display: flex;
+        justify-content: center;
+        .logo{
+            margin: 30px;
+        }
+        .icon{
+            display: flex;
+            align-items: center;
+            color: @black;
+        }
+    }
+    .wrapper-prod-about{
+        display: flex;
+        justify-content: center;
+        font-weight: bolder;
+
+        .products-overview{
+            margin-right: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: @black;
+        }
+        .about{
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+    }
+    
+    #products{
+        margin: 70px;  
+    }
+
+    // looped products
+    .products-container{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+    
+        .wrapper-images{
+            cursor: pointer;
+            .images{
+                width: 300px;
+                margin-bottom: 10px;
+            }
+            .info-name{
+                font-weight: bolder;
+            }
+            .wrapper-price{
+                margin-bottom: 30px;
+            }
+        }
+
+    }
+    
+    // single product 
+    .product-container{
+        display: flex;
+        justify-content: center;
+        .wrapper-item-container{
+        
+        .image{
+            width: 400px;
+        }
+        .wrapper-btns{
+            .btn-add{
+                cursor: pointer;
+                background-color: @turqoise;
+                color: @light_gray;
+                border: none;
+                font-size: 12px;
+                border-radius: 2px;
+                height: 35px;
+                width: 100px;
+                margin-bottom: 10px;
+            }
+            .btn-remove{
+                cursor: pointer;
+                background-color: @black;
+                color: @light_gray;
+                border: none;
+                font-size: 12px;
+                border-radius: 2px;
+                height: 35px;
+                width: 100px;
+            }
+        }
+        
+    }
+    }
+    #items{
+        margin-left: 5px;
+    }
+
+    // about 
+    .about-container{
+        display: flex;
+            justify-content: center;
+        .wrapper-about{
+            width: 50%;
+            padding: 35px 35px 95px 35px;
+            background: @my-white;
+            .maintext{
+            }
+            .paragraph{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+    
+}

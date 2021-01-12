@@ -1,0 +1,98 @@
+body {
+  background-color: #f2f2f2;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Oswald', sans-serif;
+}
+body .wrapper-logo {
+  display: flex;
+  justify-content: center;
+}
+body .wrapper-logo .logo {
+  margin: 30px;
+}
+body .wrapper-logo .icon {
+  display: flex;
+  align-items: center;
+  color: #131518;
+}
+body .wrapper-prod-about {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+}
+body .wrapper-prod-about .products-overview {
+  margin-right: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #131518;
+}
+body .wrapper-prod-about .about {
+  margin-left: 5px;
+  cursor: pointer;
+}
+body #products {
+  margin: 70px;
+}
+body .products-container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+body .products-container .wrapper-images {
+  cursor: pointer;
+}
+body .products-container .wrapper-images .images {
+  width: 300px;
+  margin-bottom: 10px;
+}
+body .products-container .wrapper-images .info-name {
+  font-weight: bolder;
+}
+body .products-container .wrapper-images .wrapper-price {
+  margin-bottom: 30px;
+}
+body .product-container {
+  display: flex;
+  justify-content: center;
+}
+body .product-container .wrapper-item-container .image {
+  width: 400px;
+}
+body .product-container .wrapper-item-container .wrapper-btns .btn-add {
+  cursor: pointer;
+  background-color: #35c092;
+  color: #f2f2f2;
+  border: none;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 35px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+body .product-container .wrapper-item-container .wrapper-btns .btn-remove {
+  cursor: pointer;
+  background-color: #131518;
+  color: #f2f2f2;
+  border: none;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 35px;
+  width: 100px;
+}
+body #items {
+  margin-left: 5px;
+}
+body .about-container {
+  display: flex;
+  justify-content: center;
+}
+body .about-container .wrapper-about {
+  width: 50%;
+  padding: 35px 35px 95px 35px;
+  background: #ececec;
+}
+body .about-container .wrapper-about .paragraph {
+  font-size: 16px;
+  line-height: 24px;
+}

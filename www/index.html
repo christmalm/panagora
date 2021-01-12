@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script defer src="dist/bundle.js"></script>
+
+    <script>
+        Handlebars.registerHelper('json', function(context) {
+            return JSON.stringify(context);
+        });
+    </script>
+    <title>panagora</title>
+</head>
+<body>
+    <div>
+        <div class="wrapper-logo">
+            <a href="./index.html"><img class="logo"  src="./static/panagora-logo.svg" alt=""></a>
+            <span class="icon">
+                <i class="fas fa-shopping-cart "><span id="items">0</span></i>
+            </span>
+            
+        </div>
+        
+        <div class="wrapper-prod-about">
+           <a href="./index.html" class="products-overview">Products</a>
+            <div class="about" onclick="about()">About</div>
+        </div>
+        <div id="products">
+            <!-- images and descriptions -->
+        </div>
+    </div>
+    <!-- products script -->
+    <script type="text/x-handlebars-template" id="index-template">
+        <div class="products-container">
+       {{#each products }}
+        <div id="{{id}}" class="wrapper-images"  onclick="renderProduct('{{json this}}')">
+            <img class="images" src="images/{{image}}" alt="">
+            <div class="wrapper-info">
+                <div class="info-name">
+                    {{name}} 
+                </div>
+                <div class="wrapper-price">
+                    <div class="price">{{price}} <span>{{currency}}</span></div>
+                </div>
+            </div> 
+        </div>
+       {{/each}}
+    </div>
+
+    </script>
+    <!-- single product script -->
+    <script type="text/x-handlebars-template" id="product-template">
+        <div class="product-container">
+        <div id="{{product.id}}" class="wrapper-item-container">
+            <img class="image" src="images/{{product.image}}" alt="">
+            <div class="wrapper-single-info">
+                <div class="info-single-name">
+                    {{product.name}} 
+                </div>
+                <div class="wrapper-single-price">
+                    <div class="single-price">{{product.price}} <span>{{product.currency}}</span></div>
+                </div>
+                <div class="wrapper-btns">
+                <button class="btn-add" value="inc" onclick="updateAmount(this.value)">Add Item</button>
+                <button class="btn-remove" value="dec" onclick="updateAmount(this.value)">Remove Item</button>
+                </div>  
+            </div> 
+        </div>
+    </div>
+    </script>
+    <!-- about  -->
+    <script type="text/x-handlebars-template" id="about-template">
+        <div class="about-container">
+       <div class="wrapper-about">
+           <div class="maintext">
+            {{ mainText}}
+
+           </div>
+           <div class="paragraph">
+            {{paragraph}}
+           </div>
+       </div>
+    </div>
+    </script>
+</body>
+</html>
